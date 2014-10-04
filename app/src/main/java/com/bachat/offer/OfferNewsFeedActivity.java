@@ -23,7 +23,7 @@ public class OfferNewsFeedActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.offer_news_feed);
         offerList = (ListView)findViewById(R.id.offer_news_feed_list);
-        List<OfferItem> offers = FactoryGirl.getOffers(5);
+        List<OfferItem> offers = FactoryGirl.getOffers(15);
         offerList.setAdapter(new OfferNewsFeedAdapter(offers,this));
     }
 

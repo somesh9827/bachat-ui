@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="offerListItemColor_1">#999999</color>
+    <color name="offerListItemColor_2">#ffffff</color>
+</resources>
