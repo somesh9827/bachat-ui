@@ -1,33 +1,31 @@
-package com.bachat;
+package com.bachat.offer;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
 
-import com.bachat.offer.OfferNewsFeedActivity;
+import com.bachat.R;
+import com.bachat.helper.FactoryGirl;
+import com.bachat.models.OfferItem;
 
+import java.util.List;
 
-public class HomeActivity extends Activity {
+/**
+ * Created by somesh.shrivastava on 04/10/14.
+ */
+public class OfferNewsFeedActivity extends Activity {
+    private ListView offerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        Button b = (Button)findViewById(R.id.home_click);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nextActivity = new Intent(HomeActivity.this, OfferNewsFeedActivity.class);
-                startActivity(nextActivity);
-            }
-        });
-
+        setContentView(R.layout.offer_news_feed);
+        offerList = (ListView)findViewById(R.id.offer_news_feed_list);
+        List<OfferItem> offers = FactoryGirl.getOffers(5);
+        offerList.setAdapter(new OfferNewsFeedAdapter(offers,this));
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
