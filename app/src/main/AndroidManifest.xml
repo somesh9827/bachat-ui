@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".offer.OfferNewsFeedActivity" android:label="@string/heading_offer_news_feed"></activity>
+        <activity
+            android:name=".offer.OfferNewsFeedActivity"
+            android:label="@string/heading_offer_news_feed" />
+        <activity
+            android:name=".offer.OfferDetailActivity"
+            android:label="@string/title_activity_offer_detail" >
+        </activity>
     </application>
 
 </manifest>

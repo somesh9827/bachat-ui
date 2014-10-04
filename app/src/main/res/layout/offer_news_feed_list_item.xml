@@ -2,12 +2,32 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+
     >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/offer_news_feed_list_item_shape"
+    android:layout_marginLeft="10px"
+    android:layout_marginRight="10px"
+    android:paddingLeft="10px"
+    android:paddingRight="10px"
+    >
+
 <TextView
-    style="@style/OfferListText"
+    style="@style/OfferListProductName"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/offer_news_feed_list_item_text"
+    android:id="@+id/offer_news_feed_list_item_product_name"
     />
+
+<TextView
+    style="@style/OfferListDescription"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/offer_news_feed_list_item_description"
+    />
+</LinearLayout>
 </LinearLayout>

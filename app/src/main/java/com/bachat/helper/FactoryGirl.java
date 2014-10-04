@@ -17,7 +17,7 @@ public class FactoryGirl {
             OfferItem offerItem  = new OfferItem();
             offerItem.setId(i);
             offerItem.setStartTime(new Date());
-            offerItem.setProduct_name("Nike");
+            offerItem.setProductName("Nike");
             offerItem.setDescription("Buy 1 get 1 free on Nike Shoes above 4000");
             offerItem.setEndTime(new Date());
             offerItem.setShopOwnerId(100);

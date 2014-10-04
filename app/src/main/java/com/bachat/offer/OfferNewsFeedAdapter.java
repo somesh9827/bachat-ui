@@ -51,13 +51,15 @@ public class OfferNewsFeedAdapter extends BaseAdapter {
         if(convertView == null) {
             convertView = LayoutInflater.from(_context).inflate(R.layout.offer_news_feed_list_item,parent,false);
         }
-        if((i % 2) ==0)
+       /* if((i % 2) ==0)
             convertView.setBackgroundColor(_context.getResources().getColor(R.color.offerListItemColor_1));
         else
             convertView.setBackgroundColor(_context.getResources().getColor(R.color.offerListItemColor_2));
-        TextView offerText =(TextView)convertView.findViewById(R.id.offer_news_feed_list_item_text);
+        */TextView productName =(TextView)convertView.findViewById(R.id.offer_news_feed_list_item_product_name);
+        TextView offerDescription = (TextView)convertView.findViewById(R.id.offer_news_feed_list_item_description);
         OfferItem item = (OfferItem)getItem(i);
-        offerText.setText(item.getDescription());
+        offerDescription.setText(item.getDescription());
+        productName.setText(item.getProductName());
         return convertView;
     }
 }
