@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class OfferItem {
     private int id;
-    private int shopOwnerId;
+    private Shop shop;
     private Date startTime;
     private Date EndTime;
     private String productName;
@@ -22,12 +22,12 @@ public class OfferItem {
         this.id = id;
     }
 
-    public int getShopOwnerId() {
-        return shopOwnerId;
+    public Shop getShop() {
+        return shop;
     }
 
-    public void setShopOwnerId(int shopOwnerId) {
-        this.shopOwnerId = shopOwnerId;
+    public void setShop(Shop shop) {
+        this.shop = shop;
     }
 
     public Date getStartTime() {

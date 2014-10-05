@@ -1,5 +1,6 @@
 package com.bachat.helper;
 
+import com.bachat.models.NewsItem;
 import com.bachat.models.OfferItem;
 
 import java.util.ArrayList;
@@ -20,9 +21,21 @@ public class FactoryGirl {
             offerItem.setProductName("Nike");
             offerItem.setDescription("Buy 1 get 1 free on Nike Shoes above 4000");
             offerItem.setEndTime(new Date());
-            offerItem.setShopOwnerId(100);
+            //offerItem.setShop(100);
             offerItemList.add(offerItem);
         }
         return offerItemList;
+    }
+
+    public static List<NewsItem> getOfferNewsItems(int maxNoOfOffer) {
+        List<NewsItem> offerNewsFeedItemList = new ArrayList<NewsItem>();
+        for (int i = 0; i < maxNoOfOffer; i++) {
+            NewsItem offerNewsItem = new NewsItem();
+            offerNewsItem.setProductName("Nike");
+            offerNewsItem.setOfferDescription("Buy 1 get 1 free on Nike Shoes above 4000");
+            offerNewsFeedItemList.add(offerNewsItem);
+            offerNewsItem.setOfferId(i);
+        }
+        return offerNewsFeedItemList;
     }
 }

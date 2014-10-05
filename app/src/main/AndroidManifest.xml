@@ -21,7 +21,7 @@
             android:label="@string/heading_offer_news_feed" />
         <activity
             android:name=".offer.OfferDetailActivity"
-            android:label="@string/title_activity_offer_detail" >
+            android:label="@string/heading_activity_offer_detail" >
         </activity>
     </application>
 

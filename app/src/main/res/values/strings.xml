@@ -5,6 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="heading_offer_news_feed">Offers</string>
-    <string name="title_activity_offer_detail">OfferDetailActivity</string>
-
+    <string name="heading_activity_offer_detail">Offer Details</string>
+    <string name="shop_name">Hanumaan General and Gift Shop</string>
 </resources>

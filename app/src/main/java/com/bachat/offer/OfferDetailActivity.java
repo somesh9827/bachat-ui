@@ -14,6 +14,10 @@ public class OfferDetailActivity extends Activity {
         setContentView(R.layout.activity_offer_detail);
     }
 
+    private  void makeHeader(){
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

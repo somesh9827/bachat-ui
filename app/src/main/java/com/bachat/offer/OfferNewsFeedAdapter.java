@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.bachat.R;
-import com.bachat.models.OfferItem;
+import com.bachat.models.NewsItem;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,12 +18,12 @@ import java.util.List;
  * Created by somesh.shrivastava on 04/10/14.
  */
 public class OfferNewsFeedAdapter extends BaseAdapter {
-    private List<OfferItem> offerItems = Collections.emptyList();
+    private List<NewsItem> offerItems = Collections.emptyList();
     private Context _context;
-    public OfferNewsFeedAdapter(List<OfferItem> offers, Context context) {
+    public OfferNewsFeedAdapter(List<NewsItem> offers, Context context) {
         if(offers == null)return;
         _context = context;
-        offerItems = new ArrayList<OfferItem>();
+        offerItems = new ArrayList<NewsItem>();
         for (int i = 0;i < offers.size();i++) {
             offerItems.add(offers.get(i));
         }
@@ -57,8 +57,8 @@ public class OfferNewsFeedAdapter extends BaseAdapter {
             convertView.setBackgroundColor(_context.getResources().getColor(R.color.offerListItemColor_2));
         */TextView productName =(TextView)convertView.findViewById(R.id.offer_news_feed_list_item_product_name);
         TextView offerDescription = (TextView)convertView.findViewById(R.id.offer_news_feed_list_item_description);
-        OfferItem item = (OfferItem)getItem(i);
-        offerDescription.setText(item.getDescription());
+        NewsItem item = (NewsItem)getItem(i);
+        offerDescription.setText(item.getOfferDescription());
         productName.setText(item.getProductName());
         return convertView;
     }

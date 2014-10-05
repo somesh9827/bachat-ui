@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/offerDetailHeaderColor"></solid>
+    <padding android:left="@dimen/offer_detail_heading_padding_left" android:right="@dimen/offer_detail_heading_padding_right"
+        android:bottom="@dimen/offer_detail_heading_padding_bottom" android:top="@dimen/offer_detail_heading_padding_top"></padding>
+    <corners android:topLeftRadius="@dimen/corner_top_left"
+        android:topRightRadius="@dimen/corner_top_right">
+        </corners>
+</shape>

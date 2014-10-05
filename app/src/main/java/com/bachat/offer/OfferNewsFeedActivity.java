@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 import com.bachat.R;
 import com.bachat.helper.FactoryGirl;
-import com.bachat.models.OfferItem;
+import com.bachat.models.NewsItem;
 
 import java.util.List;
 
@@ -23,8 +23,8 @@ public class OfferNewsFeedActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.offer_news_feed);
         offerList = (ListView)findViewById(R.id.offer_news_feed_list);
-        List<OfferItem> offers = FactoryGirl.getOffers(15);
-        offerList.setAdapter(new OfferNewsFeedAdapter(offers,this));
+        List<NewsItem> offersNewsItem = FactoryGirl.getOfferNewsItems(15);
+        offerList.setAdapter(new OfferNewsFeedAdapter(offersNewsItem,this));
     }
 
     @Override
@@ -45,4 +45,5 @@ public class OfferNewsFeedActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

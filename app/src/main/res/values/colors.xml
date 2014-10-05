@@ -2,4 +2,6 @@
 <resources>
    <color name="offerListItemColor_1">#999999</color>
     <color name="offerListItemColor_2">#ffffff</color>
+    <color name="offerDetailHeaderColor">#008080</color>
+    <color name="offerDetailBorderColor">#008080</color>
 </resources>
