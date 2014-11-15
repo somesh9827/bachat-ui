@@ -1,10 +1,12 @@
 package com.bachat.offer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.bachat.R;
 import com.bachat.helper.FactoryGirl;
@@ -17,6 +19,9 @@ public class OfferDetailActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        String offer_id = intent.getStringExtra("offer_id");
+        Toast.makeText(OfferDetailActivity.this,offer_id,Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_offer_detail);
         ListView offerList = (ListView)findViewById(R.id.offer_detail_list);
         List<OfferItem> offers = FactoryGirl.getOffers(4);

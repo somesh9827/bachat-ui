@@ -43,7 +43,7 @@ public class OfferNewsFeedAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
-        return i;
+        return ((NewsItem)getItem(i)).getOfferId();
     }
 
     @Override

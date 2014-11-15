@@ -1,9 +1,12 @@
 package com.bachat.offer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.bachat.R;
@@ -23,8 +26,17 @@ public class OfferNewsFeedActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer_news_feed);
         offerList = (ListView)findViewById(R.id.offer_news_feed_list);
+        offerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+                Intent intent = new Intent(adapterView.getContext(),OfferDetailActivity.class);
+                intent.putExtra("offer_id",Long.toString(id));
+                startActivity(intent);
+            }
+        });
         List<NewsItem> offersNewsItem = FactoryGirl.getOfferNewsItems(15);
         offerList.setAdapter(new OfferNewsFeedAdapter(offersNewsItem,this));
+
     }
 
     @Override

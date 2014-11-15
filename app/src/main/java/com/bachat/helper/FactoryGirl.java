@@ -29,7 +29,7 @@ public class FactoryGirl {
 
     public static List<NewsItem> getOfferNewsItems(int maxNoOfOffer) {
         List<NewsItem> offerNewsFeedItemList = new ArrayList<NewsItem>();
-        for (int i = 0; i < maxNoOfOffer; i++) {
+        for (int i = 1; i <=maxNoOfOffer; i++) {
             NewsItem offerNewsItem = new NewsItem();
             offerNewsItem.setProductName("Nike");
             offerNewsItem.setOfferDescription("Buy 1 get 1 free on Nike Shoes above 4000");

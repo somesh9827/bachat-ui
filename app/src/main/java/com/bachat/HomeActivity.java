@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.bachat.offer.OfferDetailActivity;
+import com.bachat.offer.OfferNewsFeedActivity;
 
 
 public class HomeActivity extends Activity {
@@ -21,7 +21,7 @@ public class HomeActivity extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nextActivity = new Intent(HomeActivity.this, OfferDetailActivity.class);
+                Intent nextActivity = new Intent(HomeActivity.this, OfferNewsFeedActivity.class);
                 startActivity(nextActivity);
             }
         });
