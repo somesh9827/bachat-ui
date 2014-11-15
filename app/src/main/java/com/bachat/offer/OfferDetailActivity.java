@@ -4,7 +4,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
 import com.bachat.R;
+import com.bachat.helper.FactoryGirl;
+import com.bachat.models.OfferItem;
+
+import java.util.List;
 
 public class OfferDetailActivity extends Activity {
 
@@ -12,6 +18,9 @@ public class OfferDetailActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer_detail);
+        ListView offerList = (ListView)findViewById(R.id.offer_detail_list);
+        List<OfferItem> offers = FactoryGirl.getOffers(4);
+        offerList.setAdapter(new OfferDetailAdapter(this,offers));
     }
 
     private  void makeHeader(){

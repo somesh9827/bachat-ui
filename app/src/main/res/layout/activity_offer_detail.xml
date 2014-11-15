@@ -27,10 +27,14 @@
             android:layout_height="wrap_content"
          />
         </LinearLayout>
-    <TextView
-        android:layout_weight="10"
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/offer_detail_list"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1sp"
+        android:background="#d1c7c7"
+        />
 </LinearLayout>

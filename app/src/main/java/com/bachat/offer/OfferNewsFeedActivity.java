@@ -21,7 +21,7 @@ public class OfferNewsFeedActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.offer_news_feed);
+        setContentView(R.layout.activity_offer_news_feed);
         offerList = (ListView)findViewById(R.id.offer_news_feed_list);
         List<NewsItem> offersNewsItem = FactoryGirl.getOfferNewsItems(15);
         offerList.setAdapter(new OfferNewsFeedAdapter(offersNewsItem,this));
