@@ -1,14 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
-    android:layout_marginBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:background="@drawable/offer_detail_layout"
-    tools:context="com.bachat.offer.OfferDetailActivity">
+    tools:context="com.bachat.views.OfferDetailActivity">
     <LinearLayout
         android:background="@drawable/offer_detail_header"
         android:layout_width="match_parent"
@@ -34,9 +33,36 @@
         android:layout_height="wrap_content"
         android:id="@+id/offer_detail_list"
         android:divider="@android:color/transparent"
+        android:paddingBottom="9dp"
         android:dividerHeight="1sp"
         android:background="#d1c7c7"
         />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="end"
+    android:paddingBottom="5sp"
+    android:paddingTop="5sp"
+    >
 
-    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/offer_detail_shop_info"
+        android:text="@string/shop_info"
+        style="@style/offerDetailButton"
+        android:layout_marginRight="10sp"
+        android:background="@drawable/offer_detail_button"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/offer_detail_navigate_to_shop"
+        android:text="@string/navigate_to_shop"
+        style="@style/offerDetailButton"
+        android:layout_marginRight="10sp"
+        android:background="@drawable/offer_detail_button"
+        />
+    </LinearLayout>
 </LinearLayout>

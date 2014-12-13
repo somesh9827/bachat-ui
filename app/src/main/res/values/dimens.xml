@@ -14,4 +14,5 @@
     <dimen name="offer_detail_heading_padding_top">5dp</dimen>
     <dimen name="offer_detail_heading_padding_bottom">5dp</dimen>
     <dimen name="offer_detail_item_header_height">40dp</dimen>
+    <dimen name="offer_detail_list_height">420dp</dimen>
 </resources>

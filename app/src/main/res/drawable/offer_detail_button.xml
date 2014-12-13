@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/offerDetailButtonColor"></solid>
+    <padding android:left="6sp" android:right="6sp"></padding>
+    <corners android:topLeftRadius="@dimen/corner_top_left"
+        android:topRightRadius="@dimen/corner_top_right"
+        android:bottomLeftRadius="@dimen/corner_bottom_left"
+        android:bottomRightRadius="@dimen/corner_bottom_right"
+        >
+    </corners>
+</shape>

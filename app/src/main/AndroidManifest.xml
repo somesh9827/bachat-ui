@@ -17,12 +17,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".offer.OfferNewsFeedActivity"
+            android:name=".views.OfferNewsFeedActivity"
             android:label="@string/heading_offer_news_feed" />
         <activity
-            android:name=".offer.OfferDetailActivity"
+            android:name=".views.OfferDetailActivity"
             android:label="@string/heading_activity_offer_detail" >
         </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAc2FhkB82jTZaOBhYUOQ8f969EWwqCZ4E" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <activity
+            android:name=".views.TakeMeToShop"
+            android:label="@string/title_activity_take_me_to_shop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>

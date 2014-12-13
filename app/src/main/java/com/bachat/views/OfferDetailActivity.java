@@ -1,30 +1,35 @@
-package com.bachat;
+package com.bachat.views;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
-import com.bachat.views.OfferNewsFeedActivity;
+import com.bachat.R;
+import com.bachat.helpers.FactoryGirl;
+import com.bachat.models.OfferItem;
+import com.bachat.views.adapters.OfferDetailAdapter;
 
+import java.util.List;
 
-public class HomeActivity extends Activity {
+public class OfferDetailActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        Button b = (Button)findViewById(R.id.home_click);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nextActivity = new Intent(HomeActivity.this, OfferNewsFeedActivity.class);
-                startActivity(nextActivity);
-            }
-        });
+        Intent intent = getIntent();
+        String offer_id = intent.getStringExtra("offer_id");
+        Toast.makeText(OfferDetailActivity.this,offer_id,Toast.LENGTH_LONG).show();
+        setContentView(R.layout.activity_offer_detail);
+        ListView offerList = (ListView)findViewById(R.id.offer_detail_list);
+        List<OfferItem> offers = FactoryGirl.getOffers(4);
+        offerList.setAdapter(new OfferDetailAdapter(this,offers));
+    }
+
+    private  void makeHeader(){
 
     }
 
@@ -32,7 +37,7 @@ public class HomeActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.offer_detail, menu);
         return true;
     }
 

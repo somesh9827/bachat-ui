@@ -4,4 +4,5 @@
     <color name="offerListItemColor_2">#ffffff</color>
     <color name="offerDetailHeaderColor">#008080</color>
     <color name="offerDetailBorderColor">#008080</color>
+    <color name="offerDetailButtonColor">#4AB0A3</color>
 </resources>

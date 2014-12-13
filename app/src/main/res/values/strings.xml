@@ -7,4 +7,8 @@
     <string name="heading_offer_news_feed">Offers</string>
     <string name="heading_activity_offer_detail">Offer Details</string>
     <string name="shop_name">Hanumaan General and Gift Shop</string>
+    <string name="shop_info">Shop Details</string>
+    <string name="navigate_to_shop">Take me to shop</string>
+    <string name="title_activity_take_me_to_shop">Shop Location</string>
+
 </resources>
